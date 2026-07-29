@@ -2,7 +2,7 @@
 ###Functional Todo Application Architecture
 An architectural implementation of a Todo Application built with Vanilla JavaScript using pure Functional Programming (FP) concepts, an immutable Store pattern, and dynamic Observer Subscriptions.
 
-###💡 Idea & Overall Architecture
+### 💡Idea & Overall Architecture
 The core objective of this project is to achieve absolute Separation of Concerns (SoC) by disconnecting core business logic from DOM operations and browser persistence mechanisms.
 
 Instead of binding data modifications directly to the DOM or mixing API/storage calls inside functions, the application is divided into three distinct operational layers:
