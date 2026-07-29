@@ -28,7 +28,6 @@ Instead of binding individual event listeners to every list item button, a singl
 Subscribers (UI renderer and Storage persistence) subscribe to state changes. Whenever dispatch triggers, all listeners execute automatically in a reactive manner.
 
 ### Step-by-Step Execution Lifecycle
-
 ## Initialization:
 loadFromStorage fetches raw JSON from localStorage and safely parses it using safeJSONParse.
 createStore initializes with the parsed data or a fallback empty array ([]).
