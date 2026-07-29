@@ -24,9 +24,6 @@ State encapsulation is achieved via createStore. Internal variables (state and l
 4. Event Delegation
 Instead of binding individual event listeners to every list item button, a single delegated listener attached to the parent container (<ul>) listens for events, reducing memory consumption and enhancing performance.
 
-5. Observer Pattern
-Subscribers (UI renderer and Storage persistence) subscribe to state changes. Whenever dispatch triggers, all listeners execute automatically in a reactive manner.
-
 ### Step-by-Step Execution Lifecycle
 ## Initialization:
 loadFromStorage fetches raw JSON from localStorage and safely parses it using safeJSONParse.
