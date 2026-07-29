@@ -26,7 +26,7 @@ Instead of binding individual event listeners to every list item button, a singl
 
 5. Observer Pattern
 Subscribers (UI renderer and Storage persistence) subscribe to state changes. Whenever dispatch triggers, all listeners execute automatically in a reactive manner.
-
+________________________________________________________________________
 ### Step by Step Execution Lifecycle
 ## Initialization:
 loadFromStorage fetches raw JSON from localStorage and safely parses it using safeJSONParse.
