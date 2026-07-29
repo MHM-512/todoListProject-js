@@ -21,7 +21,11 @@ Functions like safeJSONParse and saveToStorage utilize partial application and c
 3. Store Pattern with Closure
 State encapsulation is achieved via createStore. Internal variables (state and listeners) are kept private inside a closure and can only be accessed or modified through explicit methods (getState, dispatch, subscribe).
 
+4. Event Delegation
+Instead of binding individual event listeners to every list item button, a single delegated listener attached to the parent container (<ul>) listens for events, reducing memory consumption and enhancing performance.
 
+5. Observer Pattern
+Subscribers (UI renderer and Storage persistence) subscribe to state changes. Whenever dispatch triggers, all listeners execute automatically in a reactive manner.
 
 ### Step-by-Step Execution Lifecycle
 ## Initialization:
