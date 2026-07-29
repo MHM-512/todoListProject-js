@@ -29,23 +29,23 @@ Subscribers (UI renderer and Storage persistence) subscribe to state changes. Wh
 
 ### Step-by-Step Execution Lifecycle
 
-##Initialization:
+## Initialization:
 loadFromStorage fetches raw JSON from localStorage and safely parses it using safeJSONParse.
 createStore initializes with the parsed data or a fallback empty array ([]).
 
-##Subscription Setup:
+## Subscription Setup:
 The render function subscribes to the store.
 The saveToStorage function subscribes to the store.
 
-##DOM Ready & Initial Render:
+## DOM Ready & Initial Render:
 Upon DOMContentLoaded, the store’s current state is read via getState() and painted to the DOM using render.
 
-##Action Dispatching:
+## Action Dispatching:
 User submits a todo or clicks action buttons.
 Event listeners capture the interaction and call store.dispatch().
 The store executes the reducer, mutates internal state immutably, and triggers all subscribers sequentially.
 
-###Key Advantages of This Architecture
+### Key Advantages of This Architecture
 - Decoupled Architecture: Business logic is entirely decoupled from DOM/Storage layers. Replacing localStorage with a Remote REST API requires changing only the subscriber function—zero changes needed in business functions or UI logic.
 - Testability: All pure logic functions can be unit-tested without mocking DOM elements or browser APIs.
 - Predictable State Transitions: One-way data flow prevents race conditions and makes application behavior transparent and predictable.
